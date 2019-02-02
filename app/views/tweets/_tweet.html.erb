@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-image">
+        <img src="<%= tweet.image_url %>">
+      </div>
+      <div class="card-content">
+        <p style="font-size:20px;font-weight:900">
+          <span><%= tweet.title %></span>
+            <i class="material-icons">
+              <%= link_to("flight","https://earth.google.com/web/search/#{tweet.title}",:onclick=>"window.open(this.href,'hoge', 'height=800, width=800');return false;") %>
+            </i>
+          </p>
+        <p><%= simple_format(tweet.text) %></p>
+        <div class = "posted">
+          <p class="posted-name"><%= tweet.user.name %></p>
+          <p class="posted-date"><%= tweet.updated_at.in_time_zone('Tokyo').to_s[0..15] %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

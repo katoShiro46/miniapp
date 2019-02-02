@@ -1,0 +1,48 @@
+nav{
+  position:fixed;
+  top:0;
+  z-index:100;
+}
+
+body{
+  background-image: url("地球儀.jpg");
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+
+footer{
+   position:fixed;
+   bottom:0;
+   width:100%;z-index:100
+}
+
+.body-image{
+  padding-top:100px;
+  padding-bottom:300px;
+  background-color:rgba(100,100,100,0.8)
+}
+
+.material-icons{
+  float:right;
+}
+
+.btn-floating halfway-fab waves-effect waves-light blue{
+  display: inline-block;
+  float:right
+}
+
+.col{
+  width:70%;
+  margin:0 auto;
+}
+
+.posted{
+  text-align:right;
+}
+
+.posted-name{
+}
+
+.posted-date{
+
+}
