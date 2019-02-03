@@ -15,6 +15,10 @@
         <div class = "posted">
           <p class="posted-name"><%= tweet.user.name %></p>
           <p class="posted-date"><%= tweet.updated_at.in_time_zone('Tokyo').to_s[0..15] %></p>
+          <% if user_signed_in? && tweet.user_id == current_user.id %>
+            <%= link_to("編集","tweets/#{tweet.id}/edit")%>
+            <%= link_to("削除","tweets/#{tweet.id}",method: :delete) %>
+          <% end %>
         </div>
       </div>
     </div>
