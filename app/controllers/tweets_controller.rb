@@ -29,6 +29,9 @@ class TweetsController < ApplicationController
     redirect_to action: :index
   end
 
+  def presentation
+  end
+
   private
   def tweet_params
     params.require(:tweet).permit(:title,:text,:image_url,:adress)
